@@ -1,7 +1,7 @@
 resource "aws_security_group" "main" {
-  name        = "allow_all"
-  description = "Allow TLS inbound traffic and all outbound traffic"
-  vpc_id      = aws_vpc.main.id
+  name        = var.sg_name
+  description = var.sg_descrption
+  vpc_id      = var.vpc_id
 
   tags = {
     Name = "allow_tls"
